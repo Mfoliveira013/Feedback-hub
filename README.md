@@ -1,103 +1,104 @@
-🗣️ Feedback Hub
-Central Inteligente de Feedbacks & Experiência do Usuário
+# 💬 Feedback Hub — Plataforma Corporativa de Feedback
 
-Plataforma corporativa para coleta, organização e análise estratégica de feedbacks de usuários, transformando opiniões reais em decisões orientadas por dados.
+> Sistema inteligente para gestão de feedback corporativo, desenvolvimento de colaboradores e fortalecimento da cultura organizacional.
 
-📌 Visão Geral
+---
 
-O Feedback Hub é uma aplicação web desenvolvida para centralizar feedbacks de usuários em um único ambiente, permitindo que equipes de produto, suporte e gestão acompanhem dores, sugestões e oportunidades de melhoria em tempo real.
+## 📌 Visão Geral
 
-A plataforma resolve o problema da informação dispersa, oferecendo uma visão clara, organizada e acionável da experiência do usuário, essencial para evolução contínua de produtos e serviços digitais.
+O **Feedback Hub** é uma plataforma corporativa desenvolvida para **centralizar, organizar e estruturar feedbacks internos**, permitindo que empresas promovam comunicação clara, desenvolvimento contínuo e melhoria de desempenho.
 
-🎯 Objetivos do Projeto
+O sistema atende **colaboradores, líderes e gestores**, com controle de permissões, rastreabilidade e organização por setor e filial.
 
-Centralizar todos os feedbacks em um único sistema
+---
 
-Facilitar o registro de sugestões, bugs e reclamações
+## 🎯 Objetivos do Projeto
 
-Organizar feedbacks por categoria, prioridade e status
+- Centralizar feedbacks em um ambiente único e seguro
+- Padronizar processos de feedback corporativo
+- Facilitar a comunicação entre colaboradores e liderança
+- Apoiar o desenvolvimento profissional
+- Criar histórico estruturado de feedbacks
 
-Identificar padrões e recorrências automaticamente
+---
 
-Apoiar decisões estratégicas com base em dados reais
+## 👥 Tipos de Usuário
 
-Criar histórico rastreável de melhorias implementadas
+| Perfil | Descrição |
+|------|----------|
+| **Colaborador** | Envia e recebe feedbacks, visualiza apenas seus dados |
+| **Líder / Gestor** | Envia feedbacks, acompanha equipe |
+| **Administrador / RH** | Gerencia usuários, setores e permissões |
 
-👥 Perfis de Usuário
-Perfil	Descrição
-Administrador	Controle total da plataforma, usuários e categorias
-Produto / UX	Análise de feedbacks e priorização de melhorias
-Suporte / Operações	Registro, acompanhamento e atualização de status
-Usuário Final	Envio de feedbacks, sugestões e relatos de problemas
-🔄 Fluxo da Plataforma
-1️⃣ Coleta de Feedback
+---
 
-Registro rápido e intuitivo
+## 🔄 Fluxo da Plataforma
 
-Tipos: sugestão, bug, melhoria ou opinião
+### 1️⃣ Login
+- Autenticação por e-mail e senha
+- Login corporativo
 
-Possibilidade de anexos e comentários
+### 2️⃣ Cadastro / Configuração Inicial
+Após o primeiro acesso, o usuário deve completar:
+- Nome completo
+- Setor de trabalho
+- Filial
+- Cargo / Tipo de conta
+- Permissões iniciais
 
-2️⃣ Organização Inteligente
+> ⚠️ O acesso completo ao sistema só é liberado após essa etapa.
 
-Classificação por categoria e prioridade
+### 3️⃣ Painel do Usuário
+- Visualização clara de feedbacks enviados e recebidos
+- Status dos feedbacks
+- Histórico individual
 
-Definição de status (aberto, em análise, em andamento, resolvido)
+### 4️⃣ Envio de Feedback
+- Feedback estruturado (positivo, construtivo ou reconhecimento)
+- Associação por setor e colaborador
+- Registro com data e autor
 
-Histórico completo de interações
+### 5️⃣ Gestão Administrativa (RH)
+- Cadastro e edição de setores
+- Controle de filiais
+- Gestão de cargos e permissões
+- Visualização geral dos feedbacks
 
-3️⃣ Análise Estratégica
+---
 
-Visualização de feedbacks recorrentes
+## 🧠 Inteligência e Automação
 
-Identificação de pontos críticos
+O Feedback Hub pode ser integrado com IA para:
+- Classificação de feedbacks por tipo
+- Identificação de padrões de melhoria
+- Apoio à gestão de desempenho
+- Relatórios estratégicos para RH
 
-Apoio à priorização por impacto
+---
 
-🧠 Inteligência Aplicada
+## 🛠️ Tecnologias Utilizadas
 
-Agrupamento automático de feedbacks semelhantes
+- **Frontend:** Web responsivo (desktop e mobile)
+- **Backend:** API local (localhost)
+- **Banco de Dados:** Estruturado automaticamente
+- **Autenticação:** Controle de usuários e permissões
+- **IA (opcional):** Análise e classificação de texto
 
-Detecção de temas recorrentes
+---
 
-Apoio à priorização baseada em volume e impacto
+## 📂 Estrutura do Projeto (exemplo)
 
-A IA atua como um copiloto de produto, não como substituta da decisão humana.
-
-🛠️ Tecnologias Utilizadas
-
-Frontend: React / Web Responsivo
-
-Backend: API REST
-
-Banco de Dados: PostgreSQL
-
-Autenticação: E-mail e senha
-
-Análise de Texto: Processamento semântico
-
-Infraestrutura: Local ou Cloud
-
-📂 Estrutura do Projeto
+```bash
 feedback-hub/
 ├── frontend/
+│   ├── login/
+│   ├── cadastro/
+│   ├── configuracao-inicial/
 │   ├── dashboard/
-│   ├── feedbacks/
-│   ├── usuarios/
-│   └── configuracoes/
+│   └── feedbacks/
 ├── backend/
 │   ├── auth/
+│   ├── usuarios/
 │   ├── feedbacks/
-│   ├── categorias/
-│   └── analytics/
+│   └── relatorios/
 └── README.md
-
-🚀 Impacto Esperado
-
-Redução de retrabalho
-
-Melhoria contínua baseada em dados reais
-
-Decisões mais rápidas e assertivas
-
-Evolução orientada pela voz do usuári
