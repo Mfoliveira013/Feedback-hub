@@ -1,0 +1,81 @@
+{
+  "name": "RespostaPesquisaPeriodica",
+  "type": "object",
+  "properties": {
+    "pesquisa_id": {
+      "type": "string",
+      "description": "ID da pesquisa enviada"
+    },
+    "colaborador_email": {
+      "type": "string",
+      "description": "Email do colaborador que respondeu"
+    },
+    "colaborador_nome": {
+      "type": "string",
+      "description": "Nome do colaborador"
+    },
+    "colaborador_cargo": {
+      "type": "string",
+      "description": "Cargo do colaborador"
+    },
+    "colaborador_setor": {
+      "type": "string",
+      "description": "Setor do colaborador"
+    },
+    "tipo_pesquisa": {
+      "type": "string",
+      "enum": [
+        "7 dias",
+        "45 dias",
+        "90 dias"
+      ],
+      "description": "Tipo do formul\u00e1rio respondido"
+    },
+    "remetente_email": {
+      "type": "string",
+      "description": "Email de quem enviou a pesquisa"
+    },
+    "remetente_nome": {
+      "type": "string",
+      "description": "Nome de quem enviou"
+    },
+    "respostas": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "secao": {
+            "type": "string"
+          },
+          "pergunta": {
+            "type": "string"
+          },
+          "resposta": {
+            "type": "string"
+          }
+        }
+      },
+      "description": "Array com todas as perguntas e respostas"
+    },
+    "data_resposta": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Data e hora da resposta"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Conclu\u00edda",
+        "Pendente"
+      ],
+      "default": "Conclu\u00edda",
+      "description": "Status da devolutiva"
+    }
+  },
+  "required": [
+    "pesquisa_id",
+    "colaborador_email",
+    "tipo_pesquisa",
+    "respostas"
+  ]
+}

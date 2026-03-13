@@ -1,0 +1,182 @@
+{
+  "name": "Feedback",
+  "type": "object",
+  "properties": {
+    "tipo_avaliacao": {
+      "type": "string",
+      "enum": [
+        "feedback",
+        "avaliacao_pontual",
+        "avaliacao_periodica",
+        "aic"
+      ],
+      "description": "Define a categoria principal da avalia\u00e7\u00e3o."
+    },
+    "titulo": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Desenvolvimento",
+          "Recupera\u00e7\u00e3o",
+          "Treinamento",
+          "Integra\u00e7\u00e3o",
+          "Advert\u00eancia Comportamental",
+          "Advert\u00eancia Operacional",
+          "Rescis\u00e3o",
+          "Produtividade",
+          "Conduta Pessoal",
+          "Engajamento"
+        ]
+      },
+      "description": "T\u00edtulos espec\u00edficos da avalia\u00e7\u00e3o. Pode haver mais de um."
+    },
+    "classificacao": {
+      "type": "string",
+      "enum": [
+        "N\u00e3o atende",
+        "Atende abaixo",
+        "Atende",
+        "Supera parcialmente",
+        "Supera",
+        "ruim",
+        "media",
+        "boa"
+      ],
+      "description": "Classifica\u00e7\u00e3o do feedback"
+    },
+    "nota": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 5,
+      "description": "Nota num\u00e9rica do feedback (0 a 5)"
+    },
+    "destinatario_email": {
+      "type": "string",
+      "description": "Email do usu\u00e1rio que receber\u00e1 o feedback"
+    },
+    "destinatario_nome": {
+      "type": "string",
+      "description": "Nome do usu\u00e1rio que receber\u00e1 o feedback"
+    },
+    "destinatario_setor": {
+      "type": "string",
+      "description": "Setor do destinat\u00e1rio no momento da avalia\u00e7\u00e3o"
+    },
+    "descricao": {
+      "type": "string",
+      "description": "Descri\u00e7\u00e3o detalhada do feedback"
+    },
+    "remetente_email": {
+      "type": "string",
+      "description": "Email de quem enviou o feedback"
+    },
+    "remetente_nome": {
+      "type": "string",
+      "description": "Nome de quem enviou o feedback"
+    },
+    "anonimo": {
+      "type": "boolean",
+      "default": false,
+      "description": "Indica se a avalia\u00e7\u00e3o foi enviada anonimamente"
+    },
+    "data_ocorrido": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Data em que o fato do feedback ocorreu. Usada para m\u00e9tricas e exibi\u00e7\u00e3o."
+    },
+    "retroativo": {
+      "type": "boolean",
+      "default": false,
+      "description": "Indica se o feedback foi cadastrado retroativamente"
+    },
+    "registrado_por_cargo": {
+      "type": "string",
+      "description": "Cargo de quem registrou o feedback (gestor, administrador, etc.)"
+    },
+    "status_email": {
+      "type": "string",
+      "enum": [
+        "enviado",
+        "falha",
+        "pendente",
+        "nao_enviado"
+      ],
+      "default": "nao_enviado",
+      "description": "Status do envio de e-mail. nao_enviado = usu\u00e1rio sem acesso \u00e0 plataforma"
+    },
+    "motivo_falha_email": {
+      "type": "string",
+      "description": "Detalhes do erro caso o envio de e-mail falhe."
+    },
+    "notificacao_manual_necessaria": {
+      "type": "boolean",
+      "default": false,
+      "description": "Indica se \u00e9 necess\u00e1rio notificar o destinat\u00e1rio manualmente"
+    },
+    "cargo_colaborador": {
+      "type": "string",
+      "description": "Cargo funcional do colaborador no momento da avalia\u00e7\u00e3o A.I.C."
+    },
+    "funcao": {
+      "type": "string",
+      "description": "Fun\u00e7\u00e3o espec\u00edfica do colaborador no momento da avalia\u00e7\u00e3o."
+    },
+    "nota_produtividade": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "nota_conduta": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "nota_engajamento": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "observacoes": {
+      "type": "string",
+      "description": "Observa\u00e7\u00f5es do gestor na Avalia\u00e7\u00e3o A.I.C."
+    },
+    "status_avaliacao": {
+      "type": "string",
+      "enum": [
+        "Rascunho",
+        "Enviada"
+      ],
+      "default": "Rascunho"
+    },
+    "enviado_por_admin": {
+      "type": "string",
+      "description": "Email do admin global que enviou um rascunho de outra pessoa (para auditoria)"
+    },
+    "arquivos_anexados": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string"
+          },
+          "nome": {
+            "type": "string"
+          },
+          "tipo": {
+            "type": "string"
+          },
+          "tamanho": {
+            "type": "number"
+          }
+        }
+      },
+      "description": "Arquivos anexados como evid\u00eancia da avalia\u00e7\u00e3o"
+    }
+  },
+  "required": [
+    "destinatario_email",
+    "descricao"
+  ]
+}

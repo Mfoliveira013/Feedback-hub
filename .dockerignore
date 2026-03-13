@@ -1,0 +1,10 @@
+node_modules
+dist
+.git
+.vscode
+.codex-dev.log
+.codex-dev.err
+backend/node_modules
+backend/.env
+*.log
+

@@ -1,0 +1,13 @@
+node_modules/
+backend/node_modules/
+dist/
+.vscode/
+.codex-dev.log
+.codex-dev.err
+codex-dev-files/
+*.log
+
+.env
+.env.*
+!.env.oracle.example
+!.env.production.example
